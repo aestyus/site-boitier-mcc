@@ -1,0 +1,37 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-meschtiscommercants-staging-140804-authRole",
+      "UnauthRoleArn": "arn:aws:iam::982382052011:role/amplify-meschtiscommercants-staging-140804-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::982382052011:role/amplify-meschtiscommercants-staging-140804-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-meschtiscommercants-staging-140804-deployment",
+      "UnauthRoleName": "amplify-meschtiscommercants-staging-140804-unauthRole",
+      "StackName": "amplify-meschtiscommercants-staging-140804",
+      "StackId": "arn:aws:cloudformation:eu-west-3:982382052011:stack/amplify-meschtiscommercants-staging-140804/a985ed70-3462-11ee-ada1-0a4cee29bfa4",
+      "AmplifyAppId": "d3ftbnyxosfjp1"
+    },
+    "categories": {
+      "auth": {
+        "MesChtisCommercants": {}
+      },
+      "function": {
+        "creationClients": {
+          "deploymentBucketName": "amplify-meschtiscommercants-staging-140804-deployment",
+          "s3Key": "amplify-builds/creationClients-7832617867644c765449-build.zip"
+        },
+        "creationTableClient": {
+          "deploymentBucketName": "amplify-meschtiscommercants-staging-140804-deployment",
+          "s3Key": "amplify-builds/creationTableClient-35776c647a6f494e646e-build.zip"
+        },
+        "postConfirmationCreateClient": {
+          "deploymentBucketName": "amplify-meschtiscommercants-staging-140804-deployment",
+          "s3Key": "amplify-builds/postConfirmationCreateClient-4a52746377596b667464-build.zip"
+        }
+      },
+      "storage": {
+        "s3meschtiscommercantsappcommercantpictureactu": {}
+      }
+    }
+  }
+}

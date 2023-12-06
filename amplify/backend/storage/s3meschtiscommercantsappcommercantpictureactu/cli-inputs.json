@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3meschtiscommercantsappcommercantpictureactu",
+  "bucketName": "meschtiscommercants-appcommercant-pictureactu",
+  "policyUUID": "34730cd4",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

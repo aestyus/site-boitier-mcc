@@ -1,0 +1,154 @@
+{
+  "api": {
+    "MesChtisCommercants": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "MesChtisCommercants": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 6
+        },
+        "signupAttributes": [
+          "BIRTHDATE",
+          "GENDER",
+          "FAMILY_NAME",
+          "NAME",
+          "EMAIL",
+          "PHONE_NUMBER",
+          "NICKNAME"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "creationClients": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "MesChtisCommercants"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "creationTableClient": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "MesChtisCommercants"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "postConfirmationCreateClient": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_creationClients_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "creationClients"
+        }
+      ]
+    },
+    "AMPLIFY_function_creationClients_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "creationClients"
+        }
+      ]
+    },
+    "AMPLIFY_function_creationTableClient_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "creationTableClient"
+        }
+      ]
+    },
+    "AMPLIFY_function_creationTableClient_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "creationTableClient"
+        }
+      ]
+    },
+    "AMPLIFY_function_postConfirmationCreateClient_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "postConfirmationCreateClient"
+        }
+      ]
+    },
+    "AMPLIFY_function_postConfirmationCreateClient_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "postConfirmationCreateClient"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "s3meschtiscommercantsappcommercantpictureactu": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}
