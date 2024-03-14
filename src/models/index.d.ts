@@ -352,6 +352,7 @@ type EagerCommerces = {
   readonly adresseLat?: string | null;
   readonly categoriesID: string;
   readonly photos?: (string | null)[] | null;
+  readonly horaires?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -382,6 +383,7 @@ type LazyCommerces = {
   readonly adresseLat?: string | null;
   readonly categoriesID: string;
   readonly photos?: (string | null)[] | null;
+  readonly horaires?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }

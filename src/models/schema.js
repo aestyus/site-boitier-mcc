@@ -1091,6 +1091,13 @@ export const schema = {
                     "attributes": [],
                     "isArrayNullable": true
                 },
+                "horaires": {
+                    "name": "horaires",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -1146,5 +1153,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.4",
-    "version": "82263098bf928f25c8aef874791fff2e"
+    "version": "66dffc23a39281e226914b52f07ca1e1"
 };
