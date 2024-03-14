@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* overflow-y: scroll; */
 }
 
 p {
@@ -37,6 +38,7 @@ h1 {
   background-color: rgb(235, 235, 235);
 }
 
+
 .field {
   display: flex;
   flex-direction: row;
@@ -46,10 +48,65 @@ h1 {
   padding: 0px 5px;
 }
 
-.sign-out {
-  margin: 40px;
-  background-color: rgb(186, 13, 13);
-  color: #ffffff;
+.sign-out-button {
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: rgb(0, 0, 0); /* Conserver la couleur rouge */
+  color: #ffffff; /* Couleur du texte */
+  font-size: 16px; /* Taille de la police */
+  font-weight: 500; /* Poids de la police */
+  border: none; /* Pas de bordure */
+  border-radius: 8px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointer */
+  transition: background-color 0.3s, color 0.3s; /* Animation transition */
+}
+
+.sign-out-button:hover {
+  background-color: #906b6b; /* Couleur de fond au survol */
+}
+
+
+.tutoContainer {
+  width: 100%;
+  padding: 50px 10%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.tutoSubContainer {
+  width: 100%;
+  padding: 100px 10%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tutoNumber {
+  font-size: xxx-large;
+  font-weight: 500;
+  color: rgb(186, 13, 13);
+}
+
+.tutoText {
   font-size: x-large;
   font-weight: 500;
+}
+
+.charger-button {
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: rgb(186, 13, 13); /* Conserver la couleur rouge */
+  color: #ffffff; /* Couleur du texte */
+  font-size: 16px; /* Taille de la police */
+  font-weight: 500; /* Poids de la police */
+  border: none; /* Pas de bordure */
+  border-radius: 8px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointer */
+  transition: background-color 0.3s, color 0.3s; /* Animation transition */
+}
+
+.charger-button:hover {
+  background-color: #ff6666; /* Couleur de fond au survol */
+}
+
+.divButton {
+  padding: 12px 24px;
 }
